@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="page_title">WomenValuesSociety | Women · Values · Society</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with forms and container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FBF8FE',
+              100: '#F3E8FA',
+              200: '#E9D5F5',
+              300: '#D5AEEE',
+              400: '#BA7CDE',
+              500: '#9B4AC8',
+              600: '#7E30AE',
+              700: '#672290',
+              800: '#521B72',
+              900: '#3D1554',
+              950: '#230932'
+            },
+            primaryPurple: '#602283',
+            deepPlum: '#220932',
+            lightBg: '#FAF9FC',
+            softViolet: '#F5EEF9'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            quote: ['Playfair Display', 'serif']
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -5px rgba(96, 34, 131, 0.07), 0 4px 12px -2px rgba(0, 0, 0, 0.04)',
+            'card': '0 12px 28px -6px rgba(45, 23, 70, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03)'
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles for Fine Details -->
+<style data-purpose="custom-elements">
+    .gradient-hero-overlay {
+      background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.92) 42%, rgba(255,255,255,0.3) 75%, rgba(255,255,255,0) 100%);
+    }
+    @media (max-width: 1024px) {
+      .gradient-hero-overlay {
+        background: linear-gradient(180deg, rgba(255,255,255,0.96) 60%, rgba(255,255,255,0.7) 100%);
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-800 bg-[#FCFBFE] antialiased selection:bg-purple-200 selection:text-purple-900">
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-50 transition-shadow duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Logo Branding Container -->
+<a class="flex items-center gap-3.5 group" href="#">
+<!-- SVG Lotus / Flame Symbol -->
+<div class="w-10 h-10 flex-shrink-0 flex items-center justify-center">
+<svg class="w-9 h-9" fill="none" viewbox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 4C22 4 28 14 28 22C28 26 25 30 22 32C19 30 16 26 16 22C16 14 22 4 22 4Z" fill="#7E30AE"></path>
+<path d="M22 13C22 13 33 19 35 28C36 32 32 37 26 37C21 37 19.5 33 22 13Z" fill="#A844BC" fill-opacity="0.85"></path>
+<path d="M22 13C22 13 11 19 9 28C8 32 12 37 18 37C23 37 24.5 33 22 13Z" fill="#D268D7" fill-opacity="0.9"></path>
+<path d="M22 22C22 22 36 26 38 34C39 37 34 40 28 39C24 38.5 22.5 34 22 22Z" fill="#7E30AE" fill-opacity="0.7"></path>
+<path d="M22 22C22 22 8 26 6 34C5 37 10 40 16 39C20 38.5 21.5 34 22 22Z" fill="#C251CA" fill-opacity="0.75"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-bold tracking-tight text-slate-900 group-hover:text-purple-700 transition-colors">WomenValuesSociety</span>
+<span class="text-[10px] tracking-wider uppercase font-semibold text-purple-700 -mt-1" data-i18n="tagline">Women · Values · Society</span>
+</div>
+</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-8 text-[15px] font-medium text-slate-600">
+<a class="text-purple-800 font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-purple-700" href="#inicio" data-i18n="nav_inicio">Inicio</a>
+<a class="hover:text-purple-700 transition-colors" href="#quienes-somos" data-i18n="nav_quienes_somos">Quiénes somos</a>
+<a class="hover:text-purple-700 transition-colors" href="#impacto" data-i18n="nav_impacto">Impacto</a>
+<a class="hover:text-purple-700 transition-colors" href="#eventos" data-i18n="nav_eventos">Eventos</a>
+<a class="hover:text-purple-700 transition-colors" href="#blog" data-i18n="nav_blog">Blog</a>
+<a class="hover:text-purple-700 transition-colors" href="#contacto" data-i18n="nav_contacto">Contacto</a>
+</nav>
+<!-- Right Header Actions -->
+<div class="flex items-center gap-4">
+<!-- Search Button -->
+<button aria-label="Buscar" class="w-10 h-10 flex items-center justify-center rounded-full text-slate-500 hover:text-purple-800 hover:bg-purple-50 transition-colors" type="button" data-i18n-aria-label="aria_search">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Language Toggle -->
+<button id="lang-toggle" class="w-10 h-10 flex items-center justify-center rounded-full text-slate-500 hover:text-purple-800 hover:bg-purple-50 transition-colors" type="button" title="Cambiar idioma">
+<span class="font-bold text-sm">ES</span>
+</button>
+<!-- Join Button (Pill style) -->
+<a class="hidden sm:inline-flex items-center gap-2 bg-[#642186] hover:bg-[#531871] text-white text-sm font-semibold px-6 py-2.5 rounded-full shadow-sm hover:shadow transition-all transform active:scale-95" href="#unete" data-i18n="btn_unete">Únete</a>
+
+<button
+  id="menu-toggle"
+  class="md:hidden w-10 h-10 flex items-center justify-center rounded-full text-slate-500 hover:text-purple-800 hover:bg-purple-50 transition-colors"
+  aria-label="Abrir menú"
+  aria-controls="mobile-menu"
+  aria-expanded="false"
+  type="button"
+>
+  <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+  </svg>
+</button>
+
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+
+<!-- Overlay oscuro -->
+<div id="menu-overlay" class="md:hidden fixed inset-0 z-40 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+<!-- Drawer lateral derecho -->
+<aside id="mobile-menu" class="md:hidden fixed top-0 right-0 z-50 h-full w-[85%] max-w-sm bg-white border-l border-purple-100 shadow-[-12px_0_32px_rgba(45,23,70,0.18)] translate-x-full transition-transform duration-300 ease-out flex flex-col" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <!-- Cabecera drawer -->
+  <div class="flex items-center justify-between h-20 px-5 border-b border-purple-100 shrink-0">
+    <a class="flex items-center gap-2.5" href="#">
+      <div class="w-9 h-9 flex-shrink-0 flex items-center justify-center">
+        <svg class="w-8 h-8" fill="none" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 4C22 4 28 14 28 22C28 26 25 30 22 32C19 30 16 26 16 22C16 14 22 4 22 4Z" fill="#7E30AE"></path>
+          <path d="M22 13C22 13 33 19 35 28C36 32 32 37 26 37C21 37 19.5 33 22 13Z" fill="#A844BC" fill-opacity="0.85"></path>
+          <path d="M22 13C22 13 11 19 9 28C8 32 12 37 18 37C23 37 24.5 33 22 13Z" fill="#D268D7" fill-opacity="0.9"></path>
+        </svg>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-base font-bold tracking-tight text-slate-900 leading-none">WomenValuesSociety</span>
+        <span class="text-[9px] tracking-wider uppercase font-semibold text-purple-700 mt-0.5" data-i18n="tagline">Women · Values · Society</span>
+      </div>
+    </a>
+    <button id="menu-close" type="button" class="w-10 h-10 flex items-center justify-center rounded-full text-slate-500 hover:text-purple-800 hover:bg-purple-50 transition-colors" aria-label="Cerrar menú">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Enlaces -->
+  <nav class="flex-1 overflow-y-auto px-4 py-4 flex flex-col gap-1" id="mobile-nav">
+    <a class="mobile-link px-4 py-3 rounded-xl text-purple-800 font-semibold bg-purple-50" href="#inicio" data-i18n="nav_inicio">Inicio</a>
+    <a class="mobile-link px-4 py-3 rounded-xl text-slate-600 hover:text-purple-700 hover:bg-purple-50 transition-colors" href="#quienes-somos" data-i18n="nav_quienes_somos">Quiénes somos</a>
+    <a class="mobile-link px-4 py-3 rounded-xl text-slate-600 hover:text-purple-700 hover:bg-purple-50 transition-colors" href="#impacto" data-i18n="nav_impacto">Impacto</a>
+    <a class="mobile-link px-4 py-3 rounded-xl text-slate-600 hover:text-purple-700 hover:bg-purple-50 transition-colors" href="#eventos" data-i18n="nav_eventos">Eventos</a>
+    <a class="mobile-link px-4 py-3 rounded-xl text-slate-600 hover:text-purple-700 hover:bg-purple-50 transition-colors" href="#blog" data-i18n="nav_blog">Blog</a>
+    <a class="mobile-link px-4 py-3 rounded-xl text-slate-600 hover:text-purple-700 hover:bg-purple-50 transition-colors" href="#contacto" data-i18n="nav_contacto">Contacto</a>
+  </nav>
+
+  <!-- CTA abajo -->
+  <div class="p-4 border-t border-purple-100 shrink-0">
+    <a class="mobile-link w-full inline-flex items-center justify-center gap-2 bg-[#642186] hover:bg-[#531871] text-white text-sm font-semibold px-6 py-3 rounded-full shadow-sm transition-all" href="#unete" data-i18n="btn_unete">Únete</a>
+  </div>
+</aside>
+
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="relative overflow-hidden bg-white border-b border-purple-50/60 min-h-[560px] lg:min-h-[620px] flex items-center" id="inicio">
+<!-- Background Hero Image Container -->
+<div class="absolute inset-0 z-0">
+<img alt="Mujer líder empoderada sonriendo con el atardecer y rascacielos de fondo" data-i18n-alt="alt_hero_img" class="w-full h-full object-cover object-right-top" src="imagenes/MujerEmpoderada.jpg"/>
+<!-- Subtle Purple Tint & Content Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent/30 lg:w-3/4"></div>
+<div class="absolute inset-0 bg-purple-900/10 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+<div class="max-w-xl lg:max-w-2xl">
+<!-- Tag / Chip -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE4F6] text-[#6E2293] text-xs sm:text-sm font-semibold tracking-wide mb-6" data-i18n="chip_hero">Juntas construimos</div>
+<!-- Main Hero Title -->
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12] mb-6" data-i18n="hero_title">
+            Una sociedad <br class="hidden sm:inline"/>
+<span class="text-[#642186]">más justa y valiosa</span>
+</h1>
+<!-- Body Description -->
+<p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-xl" data-i18n="hero_desc">
+            En <span class="font-medium text-slate-800">Women Values Society</span> creemos en el poder de las mujeres para transformar realidades. Promovemos valores, liderazgo, educación y oportunidades para construir un futuro mejor.
+          </p>
+<!-- Dual CTA Buttons -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-2 bg-[#642186] hover:bg-[#521870] text-white font-semibold text-sm sm:text-base px-7 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all duration-200 group" href="#quienes-somos" data-i18n="cta_conoce_mas">Conoce más</a>
+<a class="inline-flex items-center justify-center border-2 border-slate-800 text-slate-800 hover:bg-slate-900 hover:text-white font-semibold text-sm sm:text-base px-7 py-3.5 rounded-full transition-all duration-200" href="#unete" data-i18n="cta_unete">Únete a nuestra comunidad</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: PillarsSection -->
+<section class="py-12 bg-white border-b border-purple-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- 5 Pillars Row Layout -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 items-start text-center">
+<!-- Pillar 1: Comunidad -->
+<div class="flex flex-col items-center p-3 group transition-transform hover:-translate-y-1 duration-200">
+<div class="w-14 h-14 rounded-2xl bg-purple-50 text-[#6E2293] flex items-center justify-center mb-3 group-hover:bg-[#6E2293] group-hover:text-white transition-colors duration-200">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<h2 class="text-base font-bold text-slate-900 mb-1" data-i18n="pillar_comunidad">Comunidad</h2>
+<p class="text-xs sm:text-sm text-slate-500 max-w-[160px] leading-snug" data-i18n="pillar_comunidad_desc">Personas que inspiran y se apoyan.</p>
+</div>
+<!-- Pillar 2: Valores -->
+<div class="flex flex-col items-center p-3 group transition-transform hover:-translate-y-1 duration-200">
+<div class="w-14 h-14 rounded-2xl bg-purple-50 text-[#6E2293] flex items-center justify-center mb-3 group-hover:bg-[#6E2293] group-hover:text-white transition-colors duration-200">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<h2 class="text-base font-bold text-slate-900 mb-1" data-i18n="pillar_valores">Valores</h2>
+<p class="text-xs sm:text-sm text-slate-500 max-w-[160px] leading-snug" data-i18n="pillar_valores_desc">Ética, respeto, equidad y solidaridad.</p>
+</div>
+<!-- Pillar 3: Liderazgo -->
+<div class="flex flex-col items-center p-3 group transition-transform hover:-translate-y-1 duration-200">
+<div class="w-14 h-14 rounded-2xl bg-purple-50 text-[#6E2293] flex items-center justify-center mb-3 group-hover:bg-[#6E2293] group-hover:text-white transition-colors duration-200">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<h2 class="text-base font-bold text-slate-900 mb-1" data-i18n="pillar_liderazgo">Liderazgo</h2>
+<p class="text-xs sm:text-sm text-slate-500 max-w-[160px] leading-snug" data-i18n="pillar_liderazgo_desc">Mujeres que impulsan el cambio.</p>
+</div>
+<!-- Pillar 4: Educación -->
+<div class="flex flex-col items-center p-3 group transition-transform hover:-translate-y-1 duration-200">
+<div class="w-14 h-14 rounded-2xl bg-purple-50 text-[#6E2293] flex items-center justify-center mb-3 group-hover:bg-[#6E2293] group-hover:text-white transition-colors duration-200">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<h2 class="text-base font-bold text-slate-900 mb-1" data-i18n="pillar_educacion">Educación</h2>
+<p class="text-xs sm:text-sm text-slate-500 max-w-[160px] leading-snug" data-i18n="pillar_educacion_desc">Más conocimiento, más oportunidades.</p>
+</div>
+<!-- Pillar 5: Impacto social -->
+<div class="col-span-2 md:col-span-1 flex flex-col items-center p-3 group transition-transform hover:-translate-y-1 duration-200">
+<div class="w-14 h-14 rounded-2xl bg-purple-50 text-[#6E2293] flex items-center justify-center mb-3 group-hover:bg-[#6E2293] group-hover:text-white transition-colors duration-200">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<h2 class="text-base font-bold text-slate-900 mb-1" data-i18n="pillar_impacto">Impacto social</h2>
+<p class="text-xs sm:text-sm text-slate-500 max-w-[160px] leading-snug" data-i18n="pillar_impacto_desc">Proyectos que mejoran vidas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PillarsSection -->
+<!-- BEGIN: AboutSection -->
+<section class="py-20 bg-[#FAF9FC]" id="quienes-somos">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left Text Content -->
+<div class="lg:col-span-6 space-y-6">
+<span class="inline-block px-3.5 py-1.5 rounded-full bg-[#EFE4F6] text-[#6E2293] text-xs font-bold uppercase tracking-wider" data-i18n="about_eyebrow">Sobre nosotras</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              Unidas por un <br class="hidden sm:inline"/>
+<span class="text-[#642186]" data-i18n="about_span">propósito común</span>
+</h2>
+<p class="text-base sm:text-lg text-slate-600 leading-relaxed" data-i18n="about_desc">
+              Somos una organización que impulsa el desarrollo integral de las mujeres y su participación activa en la sociedad, desde la educación, la cultura, la economía y la comunidad.
+            </p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 bg-[#642186] hover:bg-[#521870] text-white font-semibold text-sm px-6 py-3 rounded-full shadow-sm hover:shadow transition-all group" href="#impacto" data-i18n="about_cta">Nuestra historia</a>
+</div>
+</div>
+<!-- Right Showcase Card with Image & Quote -->
+<div class="lg:col-span-6">
+<div class="relative rounded-3xl overflow-hidden shadow-2xl group">
+<!-- Women by sunrise photo -->
+<img alt="Grupo de mujeres abrazadas al amanecer frente al horizonte" data-i18n-alt="alt_about_img" class="w-full h-[380px] sm:h-[430px] object-cover transition-transform duration-700 group-hover:scale-105" src="imagenes/MujeresSonriendo.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+<!-- Quote Card Floating Overlay -->
+<div class="absolute bottom-6 left-6 right-6 bg-black/60 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-white shadow-xl">
+<div class="text-3xl text-purple-300 font-serif leading-none mb-2">“</div>
+<blockquote class="text-base sm:text-lg font-medium leading-relaxed font-sans -mt-3" data-i18n="quote_about">
+                  El cambio real no ocurre solo, <br class="hidden sm:inline"/>
+                  se construye en comunidad.
+                </blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutSection -->
+<!-- BEGIN: MissionMetricsSection -->
+<section class="py-20 bg-white" id="impacto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Mission Intro Block -->
+<div class="bg-[#FAF8FD] border border-purple-100 rounded-3xl p-8 sm:p-12 mb-12 shadow-soft">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-5">
+<div class="rounded-2xl overflow-hidden shadow-md">
+<img alt="Equipo de mujeres diversas uniendo sus manos en señal de compromiso" data-i18n-alt="alt_mission_img" class="w-full h-64 object-cover" src="imagenes/MujeresDiversas.jpg"/>
+</div>
+</div>
+<div class="lg:col-span-7 space-y-4">
+<span class="text-xs font-bold uppercase tracking-wider text-[#9B4AC8]" data-i18n="mission_eyebrow">Nuestra misión</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug" data-i18n="mission_title">
+                Impulsar el desarrollo de las mujeres y su impacto positivo en la sociedad.
+              </h2>
+<p class="text-slate-600 text-sm sm:text-base leading-relaxed" data-i18n="mission_desc">
+                Trabajamos desde la educación, la cultura, la economía y la comunidad para fortalecer sus capacidades, promover la igualdad y generar oportunidades reales para cada una de nuestras integrantes.
+              </p>
+</div>
+</div>
+</div>
+<!-- 3 Highlight Metrics Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+<!-- Metric 1 -->
+<div class="bg-white rounded-2xl p-8 border border-purple-100 text-center shadow-soft hover:shadow-card transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-purple-50 text-[#7E30AE] mx-auto flex items-center justify-center mb-4">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div class="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-2">+500</div>
+<div class="text-sm font-semibold text-purple-900" data-i18n="metric1_label">Mujeres impactadas</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-white rounded-2xl p-8 border border-purple-100 text-center shadow-soft hover:shadow-card transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-purple-50 text-[#7E30AE] mx-auto flex items-center justify-center mb-4">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div class="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-2">+20</div>
+<div class="text-sm font-semibold text-purple-900" data-i18n="metric2_label">Proyectos realizados</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-white rounded-2xl p-8 border border-purple-100 text-center shadow-soft hover:shadow-card transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-purple-50 text-[#7E30AE] mx-auto flex items-center justify-center mb-4">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div class="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-2">+10</div>
+<div class="text-sm font-semibold text-purple-900" data-i18n="metric3_label">Aliadas y colaboradores</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: MissionMetricsSection -->
+<!-- BEGIN: EventsSection -->
+<section class="py-20 bg-[#FAF9FC] border-t border-purple-50" id="eventos">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header row of the section -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-[#9B4AC8] block mb-1" data-i18n="events_eyebrow">Próximos eventos</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="events_title">Encuentros que generan valor</h2>
+</div>
+<a class="inline-flex items-center gap-1.5 text-sm font-bold text-[#642186] hover:text-[#45125e] transition-colors group" href="#eventos" data-i18n="events_view_all">
+<span>Ver todos los eventos</span>
+<svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+<!-- Event Cards Grid (Quasar QCard look & feel) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Event Card 1 -->
+<article class="bg-white rounded-2xl overflow-hidden border border-purple-100 shadow-soft hover:shadow-card transition-all duration-300 flex flex-col group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Taller de Liderazgo femenino en la comunidad" data-i18n-alt="alt_event1_img" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="imagenes/TallerLiderazgoFemenino.jpg"/>
+<!-- Date Badge -->
+<div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-3 py-2 text-center shadow-md">
+<span class="block text-xs uppercase font-extrabold text-slate-900 leading-none">25</span>
+<span class="block text-[10px] font-bold text-purple-700 tracking-wider uppercase mt-0.5" data-i18n="month_oct">Oct</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-lg font-bold text-slate-900 group-hover:text-purple-700 transition-colors mb-3 leading-snug" data-i18n="event1_title">Liderazgo femenino en la comunidad</h3>
+<div class="space-y-2 text-xs text-slate-500 mb-5">
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span data-i18n="event1_time">Sábado, 10:00 AM</span>
+</div>
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span data-i18n="event1_location">Centro Cultural Las Tunas</span>
+</div>
+</div>
+</div>
+<!-- Pill Tag -->
+<div>
+<span class="inline-block bg-[#F3E8FA] text-[#7E30AE] text-xs font-semibold px-3 py-1 rounded-full" data-i18n="event1_tag">Charla</span>
+</div>
+</div>
+</article>
+<!-- Event Card 2 -->
+<article class="bg-white rounded-2xl overflow-hidden border border-purple-100 shadow-soft hover:shadow-card transition-all duration-300 flex flex-col group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Taller de Educación financiera para mujeres con presupuestos y apuntes" data-i18n-alt="alt_event2_img" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="imagenes/TallerEducacionFinanciera.jpg"/>
+<!-- Date Badge -->
+<div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-3 py-2 text-center shadow-md">
+<span class="block text-xs uppercase font-extrabold text-slate-900 leading-none">08</span>
+<span class="block text-[10px] font-bold text-purple-700 tracking-wider uppercase mt-0.5" data-i18n="month_nov">Nov</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-lg font-bold text-slate-900 group-hover:text-purple-700 transition-colors mb-3 leading-snug" data-i18n="event2_title">Taller: Educación financiera para mujeres</h3>
+<div class="space-y-2 text-xs text-slate-500 mb-5">
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span data-i18n="event2_time">Sábado, 9:00 AM</span>
+</div>
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span data-i18n="event2_location">Sede de la organización</span>
+</div>
+</div>
+</div>
+<!-- Pill Tag -->
+<div>
+<span class="inline-block bg-[#F3E8FA] text-[#7E30AE] text-xs font-semibold px-3 py-1 rounded-full" data-i18n="event2_tag">Taller</span>
+</div>
+</div>
+</article>
+<!-- Event Card 3 -->
+<article class="bg-white rounded-2xl overflow-hidden border border-purple-100 shadow-soft hover:shadow-card transition-all duration-300 flex flex-col group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Feria de emprendedoras locales exponiendo sus productos" data-i18n-alt="alt_event3_img" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="imagenes/FeriaEmprendedoras.jpg"/>
+<!-- Date Badge -->
+<div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-3 py-2 text-center shadow-md">
+<span class="block text-xs uppercase font-extrabold text-slate-900 leading-none">22</span>
+<span class="block text-[10px] font-bold text-purple-700 tracking-wider uppercase mt-0.5" data-i18n="month_nov">Nov</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-lg font-bold text-slate-900 group-hover:text-purple-700 transition-colors mb-3 leading-snug" data-i18n="event3_title">Feria de emprendedoras</h3>
+<div class="space-y-2 text-xs text-slate-500 mb-5">
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span data-i18n="event3_time">Sábado, 9:00 AM</span>
+</div>
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span data-i18n="event3_location">Parque La Unión</span>
+</div>
+</div>
+</div>
+<!-- Pill Tag -->
+<div>
+<span class="inline-block bg-[#F3E8FA] text-[#7E30AE] text-xs font-semibold px-3 py-1 rounded-full" data-i18n="event3_tag">Feria</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: EventsSection -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-[#1C0629] text-purple-100 text-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+<div class="flex flex-col md:flex-row items-center justify-between pb-12 border-b border-purple-900/60 gap-8">
+<!-- Brand on Footer -->
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 flex-shrink-0 flex items-center justify-center">
+<svg class="w-8 h-8" fill="none" viewbox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 4C22 4 28 14 28 22C28 26 25 30 22 32C19 30 16 26 16 22C16 14 22 4 22 4Z" fill="#C251CA"></path>
+<path d="M22 13C22 13 33 19 35 28C36 32 32 37 26 37C21 37 19.5 33 22 13Z" fill="#E286EC"></path>
+<path d="M22 13C22 13 11 19 9 28C8 32 12 37 18 37C23 37 24.5 33 22 13Z" fill="#F4B7FB"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-bold tracking-tight text-white">WomenValuesSociety</span>
+<span class="text-[9px] tracking-widest uppercase font-semibold text-purple-300" data-i18n="footer_tagline">Women · Values · Society</span>
+</div>
+</div>
+<!-- Quick Links -->
+<nav class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-sm text-purple-200">
+<a class="hover:text-white transition-colors" href="#inicio" data-i18n="footer_nav_inicio">Inicio</a>
+<a class="hover:text-white transition-colors" href="#quienes-somos" data-i18n="footer_nav_quienes_somos">Quiénes somos</a>
+<a class="hover:text-white transition-colors" href="#impacto" data-i18n="footer_nav_impacto">Impacto</a>
+<a class="hover:text-white transition-colors" href="#eventos" data-i18n="footer_nav_eventos">Eventos</a>
+<a class="hover:text-white transition-colors" href="#blog" data-i18n="footer_nav_blog">Blog</a>
+<a class="hover:text-white transition-colors" href="#contacto" data-i18n="footer_nav_contacto">Contacto</a>
+</nav>
+<!-- Social Icons -->
+<div class="flex items-center gap-3">
+<!-- Facebook -->
+<a aria-label="Facebook" class="w-9 h-9 rounded-full bg-purple-900/60 hover:bg-purple-700 flex items-center justify-center text-white transition-colors" href="https://www.facebook.com/share/v/1A1t3hFZQX/" target="_blank">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+</svg>
+</a>
+<!-- Instagram -->
+<a aria-label="Instagram" class="w-9 h-9 rounded-full bg-purple-900/60 hover:bg-purple-700 flex items-center justify-center text-white transition-colors" >
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+</svg>
+</a>
+<!-- YouTube -->
+<a aria-label="YouTube" class="w-9 h-9 rounded-full bg-purple-900/60 hover:bg-purple-700 flex items-center justify-center text-white transition-colors" href="https://youtube.com/@womenvaluessociety?si=fbVnx2ZjGEV0oX0e" target="_blank">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Bottom Credits and Copyright -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-purple-300/80 gap-4">
+<div data-i18n="footer_copyright">
+          © 2026 Women Values Society. Todos los derechos reservados.
+        </div>
+<div class="flex items-center gap-1.5">
+<span data-i18n="footer_made_with">Hecho con</span>
+<span class="text-rose-500">❤️</span>
+<span data-i18n="footer_for_tomorrow">por mujeres, para un mejor mañana.</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<script>
+/* ============================================================
+   i18n - Bilingual ES / EN
+   ============================================================ */
+const i18n = {
+  es: {
+    page_title: 'WomenValuesSociety | Women · Values · Society',
+    tagline: 'Women · Values · Society',
+    nav_inicio: 'Inicio',
+    nav_quienes_somos: 'Quiénes somos',
+    nav_impacto: 'Impacto',
+    nav_eventos: 'Eventos',
+    nav_blog: 'Blog',
+    nav_contacto: 'Contacto',
+    aria_search: 'Buscar',
+    btn_unete: 'Únete',
+    chip_hero: 'Juntas construimos',
+    hero_title: 'Una sociedad <br class="hidden sm:inline"/><span class="text-[#642186]">más justa y valiosa</span>',
+    hero_desc: 'En <span class="font-medium text-slate-800">Women Values Society</span> creemos en el poder de las mujeres para transformar realidades. Promovemos valores, liderazgo, educación y oportunidades para construir un futuro mejor.',
+    cta_conoce_mas: 'Conoce más',
+    cta_unete: 'Únete a nuestra comunidad',
+    about_eyebrow: 'Sobre nosotras',
+    about_span: 'propósito común',
+    about_desc: 'Somos una organización que impulsa el desarrollo integral de las mujeres y su participación activa en la sociedad, desde la educación, la cultura, la economía y la comunidad.',
+    about_cta: 'Nuestra historia',
+    quote_about: 'El cambio real no ocurre solo,<br class="hidden sm:inline"/>se construye en comunidad.',
+    mission_eyebrow: 'Nuestra misión',
+    mission_title: 'Impulsar el desarrollo de las mujeres y su impacto positivo en la sociedad.',
+    mission_desc: 'Trabajamos desde la educación, la cultura, la economía y la comunidad para fortalecer sus capacidades, promover la igualdad y generar oportunidades reales para cada una de nuestras integrantes.',
+    metric1_label: 'Mujeres impactadas',
+    metric2_label: 'Proyectos realizados',
+    metric3_label: 'Aliadas y colaboradores',
+    events_eyebrow: 'Próximos eventos',
+    events_title: 'Encuentros que generan valor',
+    events_view_all: 'Ver todos los eventos',
+    event1_title: 'Liderazgo femenino en la comunidad',
+    event1_time: 'Sábado, 10:00 AM',
+    event1_location: 'Centro Cultural Las Tunas',
+    event1_tag: 'Charla',
+    event2_title: 'Taller: Educación financiera para mujeres',
+    event2_time: 'Sábado, 9:00 AM',
+    event2_location: 'Sede de la organización',
+    event2_tag: 'Taller',
+    event3_title: 'Feria de emprendedoras',
+    event3_time: 'Sábado, 9:00 AM',
+    event3_location: 'Parque La Unión',
+    event3_tag: 'Feria',
+    month_oct: 'Oct',
+    month_nov: 'Nov',
+    alt_hero_img: 'Mujer líder empoderada sonriendo con el atardecer y rascacielos de fondo',
+    alt_about_img: 'Grupo de mujeres abrazadas al amanecer frente al horizonte',
+    alt_mission_img: 'Equipo de mujeres diversas uniendo sus manos en señal de compromiso',
+    alt_event1_img: 'Taller de Liderazgo femenino en la comunidad',
+    alt_event2_img: 'Taller de Educación financiera para mujeres con presupuestos y apuntes',
+    alt_event3_img: 'Feria de emprendedoras locales exponiendo sus productos',
+    footer_tagline: 'Women · Values · Society',
+    footer_nav_inicio: 'Inicio',
+    footer_nav_quienes_somos: 'Quiénes somos',
+    footer_nav_impacto: 'Impacto',
+    footer_nav_eventos: 'Eventos',
+    footer_nav_blog: 'Blog',
+    footer_nav_contacto: 'Contacto',
+    footer_copyright: '© 2026 Women Values Society. Todos los derechos reservados.',
+    footer_made_with: 'Hecho con',
+    footer_for_tomorrow: 'por mujeres, para un mejor mañana.',
+    lang_es: 'ES',
+    lang_en: 'EN',
+    pillar_comunidad: 'Comunidad',
+    pillar_comunidad_desc: 'Personas que inspiran y se apoyan.',
+    pillar_valores: 'Valores',
+    pillar_valores_desc: 'Ética, respeto, equidad y solidaridad.',
+    pillar_liderazgo: 'Liderazgo',
+    pillar_liderazgo_desc: 'Mujeres que impulsan el cambio.',
+    pillar_educacion: 'Educación',
+    pillar_educacion_desc: 'Más conocimiento, más oportunidades.',
+    pillar_impacto: 'Impacto social',
+    pillar_impacto_desc: 'Proyectos que mejoran vidas.'
+  },
+  en: {
+    page_title: 'WomenValuesSociety | Women · Values · Society',
+    tagline: 'Women · Values · Society',
+    nav_inicio: 'Home',
+    nav_quienes_somos: 'Who we are',
+    nav_impacto: 'Impact',
+    nav_eventos: 'Events',
+    nav_blog: 'Blog',
+    nav_contacto: 'Contact',
+    aria_search: 'Search',
+    btn_unete: 'Join',
+    chip_hero: 'Together we build',
+    hero_title: 'A fairer and more valuable society',
+    hero_desc: 'At <span class="font-medium text-slate-800">Women Values Society</span> we believe in the power of women to transform realities. We promote values, leadership, education and opportunities to build a better future.',
+    cta_conoce_mas: 'Learn more',
+    cta_unete: 'Join our community',
+    about_eyebrow: 'About us',
+    about_span: 'common purpose',
+    about_desc: 'We are an organization that drives the integral development of women and their active participation in society, from education, culture, the economy and the community.',
+    about_cta: 'Our story',
+    quote_about: 'Real change does not happen alone,<br class="hidden sm:inline"/>it is built in community.',
+    mission_eyebrow: 'Our mission',
+    mission_title: 'To drive the development of women and their positive impact on society.',
+    mission_desc: 'We work from education, culture, the economy and the community to strengthen their capacities, promote equality and generate real opportunities for each of our members.',
+    metric1_label: 'Women impacted',
+    metric2_label: 'Projects completed',
+    metric3_label: 'Allies and collaborators',
+    events_eyebrow: 'Upcoming events',
+    events_title: 'Encounters that generate value',
+    events_view_all: 'View all events',
+    event1_title: 'Female leadership in the community',
+    event1_time: 'Saturday, 10:00 AM',
+    event1_location: 'Las Tunas Cultural Center',
+    event1_tag: 'Talk',
+    event2_title: 'Workshop: Financial education for women',
+    event2_time: 'Saturday, 9:00 AM',
+    event2_location: 'Organization headquarters',
+    event2_tag: 'Workshop',
+    event3_title: 'Women entrepreneurs fair',
+    event3_time: 'Saturday, 9:00 AM',
+    event3_location: 'La Unión Park',
+    event3_tag: 'Fair',
+    month_oct: 'Oct',
+    month_nov: 'Nov',
+    alt_hero_img: 'Empowered woman smiling with sunset and skyscrapers in the background',
+    alt_about_img: 'Group of women embracing at sunrise facing the horizon',
+    alt_mission_img: 'Diverse team of women joining hands in commitment',
+    alt_event1_img: 'Female leadership workshop in the community',
+    alt_event2_img: 'Financial education workshop for women with budgets and notes',
+    alt_event3_img: 'Women entrepreneurs fair showcasing their products',
+    footer_tagline: 'Women · Values · Society',
+    footer_nav_inicio: 'Home',
+    footer_nav_quienes_somos: 'Who we are',
+    footer_nav_impacto: 'Impact',
+    footer_nav_eventos: 'Events',
+    footer_nav_blog: 'Blog',
+    footer_nav_contacto: 'Contact',
+    footer_copyright: '© 2026 Women Values Society. All rights reserved.',
+    footer_made_with: 'Made with',
+    footer_for_tomorrow: 'by women, for a better tomorrow.',
+    lang_es: 'ES',
+    lang_en: 'EN',
+    pillar_comunidad: 'Community',
+    pillar_comunidad_desc: 'People who inspire and support each other.',
+    pillar_valores: 'Values',
+    pillar_valores_desc: 'Ethics, respect, equity and solidarity.',
+    pillar_liderazgo: 'Leadership',
+    pillar_liderazgo_desc: 'Women driving change.',
+    pillar_educacion: 'Education',
+    pillar_educacion_desc: 'More knowledge, more opportunities.',
+    pillar_impacto: 'Social impact',
+    pillar_impacto_desc: 'Projects that improve lives.'
+  }
+};
+
+let currentLang = 'es';
+
+function setLang(lang) {
+  if (!i18n[lang]) {
+    console.warn('i18n: idioma no disponible:', lang);
+    return;
+  }
+
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  localStorage.setItem('lang', lang);
+
+  const btn = document.getElementById('lang-toggle');
+  if (btn) {
+    btn.textContent = lang === 'es' ? i18n.es.lang_es : i18n.en.lang_en;
+    btn.title = lang === 'es' ? 'Cambiar a inglés' : 'Switch to English';
+  }
+
+  // Update document title
+  const titleEl = document.querySelector('title[data-i18n]');
+  if (titleEl) {
+    titleEl.textContent = i18n[lang][titleEl.dataset.i18n];
+  }
+
+  // Update all [data-i18n] elements (innerHTML to support <br>, <span>, etc.)
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    const translation = i18n[lang][key];
+    if (translation === undefined) {
+      console.warn('i18n: clave no encontrada en', lang, '->', key);
+      return;
+    }
+    el.innerHTML = translation;
+  });
+
+  // Update [data-i18n-alt] attributes (image alt text)
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    const key = el.dataset.i18nAlt;
+    const translation = i18n[lang][key];
+    if (translation === undefined) return;
+    el.setAttribute('alt', translation);
+  });
+
+  // Update [data-i18n-aria-label] attributes
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const key = el.dataset.i18nAriaLabel;
+    const translation = i18n[lang][key];
+    if (translation === undefined) return;
+    el.setAttribute('aria-label', translation);
+  });
+
+  console.log('i18n: idioma cambiado a', lang);
+}
+
+function toggleLang() {
+  setLang(currentLang === 'es' ? 'en' : 'es');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('lang');
+  const initial = saved === 'en' ? 'en' : 'es';
+  setLang(initial);
+
+  const btn = document.getElementById('lang-toggle');
+  if (btn) {
+    btn.addEventListener('click', toggleLang);
+  } else {
+    console.warn('i18n: no se encontró el botón #lang-toggle');
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuOverlay = document.getElementById('menu-overlay');
+  const menuIconPath = document.getElementById('menu-icon-path');
+
+  if (!menuToggle || !mobileMenu || !menuOverlay) return;
+
+  const openMenu = () => {
+    mobileMenu.classList.remove('translate-x-full');
+    mobileMenu.classList.add('translate-x-0');
+    menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+    menuOverlay.classList.add('opacity-100');
+    document.body.style.overflow = 'hidden';
+    menuToggle.setAttribute('aria-expanded', 'true');
+    if (menuIconPath) menuIconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+  };
+
+  const closeMenu = () => {
+    mobileMenu.classList.add('translate-x-full');
+    mobileMenu.classList.remove('translate-x-0');
+    menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+    menuOverlay.classList.remove('opacity-100');
+    document.body.style.overflow = '';
+    menuToggle.setAttribute('aria-expanded', 'false');
+    if (menuIconPath) menuIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+  };
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  if (menuClose) menuClose.addEventListener('click', closeMenu);
+  menuOverlay.addEventListener('click', closeMenu);
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  // Cerrar al pasar a escritorio (md = 768px)
+  const mq = window.matchMedia('(min-width: 768px)');
+  mq.addEventListener('change', (e) => { if (e.matches) closeMenu(); });
+});
+</script>
+</body></html>
